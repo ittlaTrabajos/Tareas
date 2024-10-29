@@ -4,37 +4,27 @@ public class Masa_corporal {
 
 	public static void main(String[] args) {
 
-		 double imc, p, t, t2;
-		        Scanner entrada=new Scanner(System.in);
-		        
-		        System.out.println("INGRESAR PESO EN KILOGRAMOS ");
-		        p=entrada.nextDouble();
-		        
-		        System.out.println("INGRESAR LA TALLA");
-		        t2=entrada.nextDouble();
-		        
-		        t=Math.pow(t2, 2);
-		        imc=p/t;
-		        
-		        String condicion = "";
-		        if (imc < 18.9){
-		            condicion = "PASO BAJO";
-		        } else if (imc < 24.99){
-		            condicion = "PESO NORMAL";
-		        } else if (imc < 29.99){
-		            condicion = "SOBRE PESO";
-		        } else if (imc < 34.99){
-		            condicion = "OBESIDAD LEVE";
-		        } else if (imc < 39.99){
-		            condicion = "OBESIDAD MEDIA";
-		        } else if (imc > 40.0){
-		            condicion = "OBESIDAD MORBIDA";
-		        }
-		        
-		        System.out.println("SU IMC SE ENCUENTRA EN " +imc);
-		        System.out.println("SU IMC SE ENCUENTRA EN " +condicion);
+		Scanner entrada=new Scanner (System.in);
+		double peso,estatura;
+		System.out.println("ingresa peso");
+		peso=entrada.nextDouble();
 
+		System.out.println("ingresa estatura");
+		estatura=entrada.nextDouble();
+		double IMC = peso/Math.pow(estatura, 2);
+		if (IMC<=18.9)
+			System.out.println("bajo peso");
+		else if(IMC>=18.50 && IMC<=24.99)
+			System.out.println("peso normal");
+		else if (IMC>=25.00 && IMC<=29.99)
+			System.out.println("sobrepeso");
+		else if (IMC>=30.00 && IMC<=34.99)
+		System.out.println("obesidad leve");
+		else if (IMC>=35.00 && IMC<=34.99)
+			System.out.println("obesidad media");
+		else if (IMC>=40.00)
+			System.out.println("obesidad morbida");
+
+			}
 
 	}
-
-}
